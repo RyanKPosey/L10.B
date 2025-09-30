@@ -22,6 +22,44 @@ class personType {
 
         void print() const;
         bool equals(const personType& other) const;
+
+        // Setters
+
+        void setFirstName(string firstName) {
+            first_name_ = firstName;
+        }
+
+        void setLastName(string lastName) {
+            last_name_ = lastName;
+        }
+
+        void setAddress(string address) {
+            address_ = address;
+        }
+
+        void setHeight(double height) {
+            if (height < 0 || height > 120) {
+                height = 0;
+            }
+
+            height_inches_ = height;
+        }
+
+        void setDOB(string DOB) {
+            date_of_birth_ = DOB;
+        }
+
+        void setGender(char gender) {
+            gender_ = gender;
+        }
+
+        /*void setAge(uint8_t age) {
+            if (a < 0 || a > 999) {
+                age = 0;
+            }
+
+            age_ = age;
+        }*/
 };
 
 void personType::print() const { // Stretch 2 (Formatted output)
