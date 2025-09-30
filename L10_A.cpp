@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdint>
 
 using namespace std;
 
@@ -17,6 +18,7 @@ class personType {
         double height_inches_{};
         std::string date_of_birth_;  
         char gender_{}; 
+        uint8_t age_;
 
     public:
 
@@ -53,13 +55,13 @@ class personType {
             gender_ = gender;
         }
 
-        /*void setAge(uint8_t age) {
-            if (a < 0 || a > 999) {
+        void setAge(uint8_t age) {
+            if (age < 0 || age > 999) {
                 age = 0;
             }
 
             age_ = age;
-        }*/
+        }
 };
 
 void personType::print() const { // Stretch 2 (Formatted output)
