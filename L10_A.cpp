@@ -11,13 +11,14 @@
 using namespace std;
 
 class personType { 
-    public:
         std::string first_name_;
         std::string last_name_;
         std::string address_;
         double height_inches_{};
         std::string date_of_birth_;  
         char gender_{}; 
+
+    public:
 
         void print() const;
         bool equals(const personType& other) const;
