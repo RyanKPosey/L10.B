@@ -16,7 +16,7 @@ bool compareStringCaseInsensitive(string string1, string string2) { // Stretch 3
         return false;
     }
 
-    for (int i = 0; i < string1.size(); i++) {
+    for (size_t i = 0; i < string1.size(); i++) {
         if (
             static_cast<unsigned char>(tolower(string1[i])) !=
             static_cast<unsigned char>(tolower(string2[i]))
@@ -164,7 +164,7 @@ int main() {
     cout << left << setw(10) << setfill('-') << "" << " # Test Getters # " << left << setw(10) << setfill('-') << "" << endl;
 
     cout << setfill(' ');
-    
+
     cout <<  left << setw(20) << " | Name: " << left << p1.getFirstName() << " " << p1.getLastName() << endl
         << left << setw(20) << " | Address: " << left << p1.getAddress() << endl
         << left << setw(20) << " | Height: " << left << std::fixed << std::setprecision(1) << p1.getHeight() << " in" << endl
