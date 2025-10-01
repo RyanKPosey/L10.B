@@ -137,9 +137,21 @@ bool personType::equals(const personType& other) const {
 
 int main() {
 
-    // Init members
+    // Init members & Stretch 4 (explicitly test setters & getters in main)
 
     personType p1{};
+
+    // Init p1 attributesas garbage values
+
+    p1.setFirstName("");
+    p1.setLastName("");
+    p1.setAddress("");
+    p1.setHeight(0);
+    p1.setDOB("");
+    p1.setGender('a');
+    p1.setAge(0);
+
+    // Reassign p1 attributes
 
     p1.setFirstName("Sabrina");
     p1.setLastName("Morales");
@@ -148,6 +160,14 @@ int main() {
     p1.setDOB("24 July 2017");
     p1.setGender('F');
     p1.setAge(20);
+    
+    cout << left << setw(10) << setfill('-') << "" << " # Test Getters # " << left << setw(10) << setfill('-') << "" << endl;
+    cout <<  left << setw(20) << " | Name: " << left << p1.getFirstName() << " " << p1.getLastName() << endl
+        << left << setw(20) << " | Address: " << left << p1.getAddress() << endl
+        << left << setw(20) << " | Height: " << left << std::fixed << std::setprecision(1) << p1.getHeight() << " in" << endl
+        << left << setw(20) << " | DOB: " << left << p1.getDOB() << endl
+        << left << setw(20) << " | Gender: " << left << p1.getGender() << endl
+        << left << setw(20) << " | Age: " << left << static_cast<int>(p1.getAge()) << endl;
 
     personType p2{};
 
