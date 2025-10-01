@@ -71,12 +71,12 @@ class personType {
             gender_ = gender;
         }
 
-        void setAge(uint8_t age) {
+        void setAge(uint16_t age) {
             if (age < 0 || age > 999) {
                 age = 0;
             }
 
-            age_ = static_cast<uint8_t>(age);
+            age_ = static_cast<uint16_t>(age);
         }
 
         // Getters
