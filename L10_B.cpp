@@ -85,15 +85,15 @@ void personType::print() const { // Stretch 2 (Formatted output)
 
 bool personType::equals(const personType& other) const {
     // Circuited comparison
-    if (this->getFirstName() != other.getFirstName()) {
+    if (compareStringCaseInsensitive(this->getFirstName(), other.getFirstName())) {
         return false;
     }
 
-    if (this->getLastName() != other.getLastName()) {
+    if (compareStringCaseInsensitive(this->getLastName(), other.getLastName())) {
         return false;
     }
 
-    if (this->getAddress() != other.getAddress()) {
+    if (compareStringCaseInsensitive(this->getAddress(), other.getAddress())) {
         return false;
     }
 
@@ -101,7 +101,7 @@ bool personType::equals(const personType& other) const {
         return false;
     }
 
-    if (this->getDOB() != other.getDOB()) {
+    if (compareStringCaseInsensitive(this->getDOB(), other.getDOB())) {
         return false;
     }
 
