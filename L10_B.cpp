@@ -11,7 +11,7 @@
 
 using namespace std;
 
-bool compareStringCaseInsensitive(string string1, string string2) {
+bool compareStringCaseInsensitive(string string1, string string2) { // Stretch 3 (Case Insensitive Comparison)
     if (string1.size() != string2.size()) { // string1 and string2 aren't the same size
         return false;
     }
