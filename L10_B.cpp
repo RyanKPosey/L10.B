@@ -112,6 +112,10 @@ bool personType::equals(const personType& other) const {
         return false;
     }
 
+    if (this->getAge() != other.getAge()) {
+        return false;
+    }
+
     return true;
 }
 
