@@ -75,11 +75,11 @@ class personType {
 };
 
 void personType::print() const { // Stretch 2 (Formatted output)
-    std::cout <<  left << setw(20) << " | Name: " << left << this->first_name_ << " " << this->last_name_ << endl
-        << left << setw(20) << " | Address: " << left << this->address_ << endl
-        << left << setw(20) << " | Height: " << left << std::fixed << std::setprecision(1) << this->height_inches_ << " in" << endl
-        << left << setw(20) << " | DOB: " << left << this->date_of_birth_ << endl
-        << left << setw(20) << " | Gender: " << left << this->gender_ << endl;
+    std::cout <<  left << setw(20) << " | Name: " << left << this->getFirstName() << " " << this->getLastName() << endl
+        << left << setw(20) << " | Address: " << left << this->getAddress() << endl
+        << left << setw(20) << " | Height: " << left << std::fixed << std::setprecision(1) << this->getHeight() << " in" << endl
+        << left << setw(20) << " | DOB: " << left << this->getDOB() << endl
+        << left << setw(20) << " | Gender: " << left << this->getGender() << endl;
 }
 
 bool personType::equals(const personType& other) const {
