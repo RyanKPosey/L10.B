@@ -119,6 +119,22 @@ bool personType::equals(const personType& other) const {
     return true;
 }
 
+bool compareStringCaseInsensitive(string string1, string string2) {
+    if (string1.size() != string2.size()) { // string1 and string2 aren't the same size
+        return false;
+    }
+
+    for (int i = 0; i < string1.size(); i++) {
+        if (
+            static_cast<unsigned char>(tolower(string1[i])) !=
+            static_cast<unsigned char>(tolower(string2[i]))
+        ) {
+            return false;
+        }
+    }
+    return true;
+}
+
 int main() {
 
     // Init members
