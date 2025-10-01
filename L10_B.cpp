@@ -62,6 +62,16 @@ class personType {
 
             age_ = age;
         }
+
+        // Getters
+
+        string getFirstName() const { return first_name_; }
+        string getLastName() const { return last_name_; }
+        string getAddress() const { return address_; }
+        double getHeight() const { return height_inches_; }
+        string getDOB() const { return date_of_birth_; }
+        char getGender() const { return gender_; }
+        uint8_t getAge() const { return age_; }
 };
 
 void personType::print() const { // Stretch 2 (Formatted output)
