@@ -72,7 +72,7 @@ class personType {
         }
 
         void setAge(uint16_t age) {
-            if (age < 0 || age > 999) {
+            if (age > 999) {
                 age = 0;
             }
 
