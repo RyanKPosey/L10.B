@@ -76,7 +76,7 @@ class personType {
                 age = 0;
             }
 
-            age_ = age;
+            age_ = static_cast<uint8_t>(age);
         }
 
         // Getters
