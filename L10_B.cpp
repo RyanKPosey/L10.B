@@ -84,29 +84,29 @@ void personType::print() const { // Stretch 2 (Formatted output)
 
 bool personType::equals(const personType& other) const {
     // Circuited comparison
-    if (this->first_name_ != other.first_name_) {
+    if (this->getFirstName() != other.getFirstName()) {
         return false;
     }
 
-    if (this->last_name_ != other.last_name_) {
+    if (this->getLastName() != other.getLastName()) {
         return false;
     }
 
-    if (this->address_ != other.address_) {
+    if (this->getAddress() != other.getAddress()) {
         return false;
     }
 
-    if (this->height_inches_ != other.height_inches_)  {
+    if (this->getHeight() != other.getHeight())  {
         return false;
     }
 
-    if (this->date_of_birth_ != other.date_of_birth_) {
+    if (this->getDOB() != other.getDOB()) {
         return false;
     }
 
     if (
-        static_cast<unsigned char>(tolower(this->gender_)) != // Case insensitive
-        static_cast<unsigned char>(tolower(other.gender_))
+        static_cast<unsigned char>(tolower(this->getGender())) != // Case insensitive
+        static_cast<unsigned char>(tolower(other.getGender()))
     ) {
         return false;
     }
