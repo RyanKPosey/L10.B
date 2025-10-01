@@ -162,6 +162,9 @@ int main() {
     p1.setAge(20);
     
     cout << left << setw(10) << setfill('-') << "" << " # Test Getters # " << left << setw(10) << setfill('-') << "" << endl;
+
+    cout << setfill(' ');
+    
     cout <<  left << setw(20) << " | Name: " << left << p1.getFirstName() << " " << p1.getLastName() << endl
         << left << setw(20) << " | Address: " << left << p1.getAddress() << endl
         << left << setw(20) << " | Height: " << left << std::fixed << std::setprecision(1) << p1.getHeight() << " in" << endl
